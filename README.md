@@ -3,7 +3,7 @@
   <a href="https://scholar.google.com/citations?hl=en&user=KGvc3jwAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Harry &nbsp;Sun</a> &emsp; 
   <a href="https://hemepath.ai/" target="_blank">Gregory M. &nbsp;Goldgof</a> &emsp; 
   <a href="https://profiles.ucsf.edu/atul.butte" target="_blank">Atul J.&nbsp;Butte</a> &emsp; 
-  <a href="[https://ahmedmalaa.github.io/](https://scholar.google.com.eg/citations?user=_pv1sEcAAAAJ&hl=en)" target="_blank">Ahmed M. &nbsp;Alaa</a>
+  <a href="https://scholar.google.com.eg/citations?user=_pv1sEcAAAAJ&hl=en" target="_blank">Ahmed M. &nbsp;Alaa</a>
   <br> <br>
   <a href="https://arxiv.org/abs/2306.12438" target="_blank">Paper</a> &emsp;
 </div>
