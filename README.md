@@ -6,7 +6,6 @@
   <a href="https://ahmedmalaa.github.io/" target="_blank">Ahmed M. &nbsp;Alaa</a>
   <br> <br>
   <a href="https://arxiv.org/abs/2306.12438" target="_blank">Paper</a> &emsp;
-  <a href="_ target="_blank">Project&nbsp;Page</a> 
 </div>
 
 <p align="center">
@@ -15,7 +14,7 @@
 
 ## Introduction
 
-This is the codespace for our work "Aligning Synthetic Medical Images with Clinical Knowledge using Human Feedback". 
+This is the codespace for "Aligning Synthetic Medical Images with Clinical Knowledge using Human Feedback". 
 This paper introduces a pathologist-in-the-loop framework for generating clinically-plausible synthetic medical images. 
 Starting with a diffusion model pretrained using real images, our framework comprises three steps: (1) evaluating the generated images by expert pathologists to assess whether they satisfy clinical desiderata (2) training a reward model that predicts the pathologist feedback on new samples, and (3) incorporating expert knowledge into the diffusion model by using the reward model to inform a finetuning objective. 
 
