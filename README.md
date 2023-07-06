@@ -9,7 +9,7 @@
 </div>
 
 <p align="center">
-    <img width="750" alt="picture" src="assets/Workflow.png"/>
+    <img width="750" alt="video" src="assets/NeurIPS2023_human_feedback.mp4"/>
 </p>
 
 ## Introduction
