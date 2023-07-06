@@ -7,8 +7,7 @@
   <br> <br>
   <a href="https://arxiv.org/abs/2306.12438" target="_blank">Paper</a> &emsp;
 </div>
-
-<a href="https://developer.chrome.com/blog/autoplay/" target="_blank" rel="noopener"> https://github.com/AlaaLab/pathologist-in-the-loop/assets/21158134/cce037bf-4dcc-4276-8700-30c8b098ea35 </a>
+https://github.com/AlaaLab/pathologist-in-the-loop/assets/21158134/cce037bf-4dcc-4276-8700-30c8b098ea35 
 
 
 ## Introduction
