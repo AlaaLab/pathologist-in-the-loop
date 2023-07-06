@@ -1,4 +1,4 @@
-## <p align="center">Aligning Synthetic Medical Images with Clinical Knowledge using Human Feedback </p>
+## <p align="center">Aligning Synthetic Medical Images with Clinical Knowledge <br> using Human Feedback </p>
 <div align="center">
   <a href="https://scholar.google.com/citations?hl=en&user=KGvc3jwAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Harry &nbsp;Sun</a> &emsp; 
   <a href="https://hemepath.ai/" target="_blank">Gregory M. &nbsp;Goldgof</a> &emsp; 
