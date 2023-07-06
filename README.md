@@ -8,10 +8,9 @@
   <a href="https://arxiv.org/abs/2306.12438" target="_blank">Paper</a> &emsp;
 </div>
 
-
-https://github.com/AlaaLab/pathologist-in-the-loop/assets/21158134/cce037bf-4dcc-4276-8700-30c8b098ea35
-
-
+<p align="center">
+    <img width="750" alt="picture" src="assets/Workflow.png"/>
+</p>
 
 ## Introduction
 
@@ -20,10 +19,6 @@ This paper introduces a pathologist-in-the-loop framework for generating clinica
 Starting with a diffusion model pretrained using real images, our framework comprises three steps: (1) evaluating the generated images by expert pathologists to assess whether they satisfy clinical desiderata (2) training a reward model that predicts the pathologist feedback on new samples, and (3) incorporating expert knowledge into the diffusion model by using the reward model to inform a finetuning objective. 
 
 We are still actively developing this repo. 
-
-<p align="center">
-    <img width="750" alt="picture" src="assets/Workflow.png"/>
-</p>
 
 ## Install 
 * Dependencies: 
@@ -50,7 +45,7 @@ The images will automatically be scaled and center-cropped by the data-loading p
 
 
 ## Training - Baseline Model
-To train your model, you should first decide some hyperparameters. We will split up our hyperparameters into three groups: model architecture, diffusion process, and training flags. Here are some reasonable defaults for a baseline:
+To train your model, you should first pick the hyperparameters. We split up our hyperparameters into three groups: model architecture, diffusion process, and training flags. Here are some reasonable defaults for a baseline:
 
 * Defaults
     ```
@@ -59,39 +54,25 @@ To train your model, you should first decide some hyperparameters. We will split
     TRAIN_FLAGS="--lr 1e-4 --batch_size 128"
     ```
 
-Here are some changes we experiment with, and how to set them in the flags:
+To conduct changes, set the following flags:
 
 *  Learned sigmas: add --learn_sigma True to MODEL_FLAGS
 *  Cosine schedule: change --noise_schedule linear to --noise_schedule   cosine
 *  Importance-sampled VLB: add --use_kl True to DIFFUSION_FLAGS and add --schedule_sampler loss-second-moment to TRAIN_FLAGS.
 *  Class-conditional: add --class_cond True to MODEL_FLAGS.
 
-Once you have setup your hyper-parameters, you can run an experiment like so:
+Once you have setup your hyper-parameters, you can run an experiment as follows:
 
 *
     ```
     python scripts/image_train.py --data_dir path/to/images $MODEL_FLAGS $DIFFUSION_FLAGS $TRAIN_FLAGS
     ```
 
-Here are some changes we experiment with, and how to set them in the flags:
-
-    * Learned sigmas: add --learn_sigma True to MODEL_FLAGS
-    * Cosine schedule: change --noise_schedule linear to --noise_schedule cosine
-    * Importance-sampled VLB: add --use_kl True to DIFFUSION_FLAGS and add --schedule_sampler loss-second-moment to TRAIN_FLAGS.
-    * Class-conditional: add --class_cond True to MODEL_FLAGS.
-
-Once you have setup your hyper-parameters, you can run an experiment like so:
-
-*
-    ```
-    python scripts/image_train.py --data_dir path/to/images $MODEL_FLAGS $DIFFUSION_FLAGS $TRAIN_FLAGS
-    ```
 
 ## Training - Reward model
 
-Our framework conceptualize the clinician feedback as a “labelling function” Γ : X × C → {0, 1} that maps the observed synthetic image ex and declared cell type (class) ec to a binary plausibility score. 
-Our framework model the “pathologist” by learning their labelling function Γ on the basis of their feedback annotations.
-To train a model Γ that estimates the pathologist labelling function, we construct a training dataset that comprises a mixture of real and synthetic images as follows:
+Our framework model the “pathologist” by learning their labelling function on the basis of their feedback annotations.
+To train the reward model that estimates the pathologist labelling function, we construct a training dataset that comprises a mixture of real and synthetic images as follows:
 
 
 <p align="center">
@@ -99,7 +80,7 @@ To train a model Γ that estimates the pathologist labelling function, we constr
 </p>
 
 
-To train the rewarding model on the real images, the real images are prepared following the ImageNet format. For instance, the image_0000.jpg from class A will be saved as "A/image_0000.jpg"; the image_0001.jpg from class Bis prepared as "B/image_0001.jpg".
+To train the reward model on the real images, the real images are prepared following the ImageNet format. For instance, the image_0000.jpg from class A will be saved as "A/image_0000.jpg"; the image_0001.jpg from class Bis prepared as "B/image_0001.jpg".
 The synthetic images with human feedback are prepared in the similar format of ImageNet format except the images are subcategorized as "align" and "notalign" under the general category. 
 
 
@@ -112,9 +93,8 @@ After the reward feedback preparation, simply run
 
     ```
 
-After training the model, we could use the scoring function to infer the clinical evaluation. Then save it as a csv file. The csv file has two columns: ID, rewards.
-The ID is the name of the image file where the naming is the same as the naming methods in the <Preparing Data>.
-The naming is the same as the baseline training model.
+After training the model, we use the scoring function to infer the clinical evaluation, then save it as a csv file. The csv file has two columns: ID, rewards.
+
 
 ## Clinically-informed finetuning
 
@@ -127,7 +107,6 @@ The naming is the same as the baseline training model.
 
 ## Released checkpoint and samples
 
-* For this paper, the medical data could not be shared due to the privacy issue.
 * The reward model will be shared soon.
 
 
