@@ -3,14 +3,13 @@
   <a href="https://scholar.google.com/citations?hl=en&user=KGvc3jwAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Harry &nbsp;Sun</a> &emsp; 
   <a href="https://hemepath.ai/" target="_blank">Gregory M. &nbsp;Goldgof</a> &emsp; 
   <a href="https://profiles.ucsf.edu/atul.butte" target="_blank">Atul J.&nbsp;Butte</a> &emsp; 
-  <a href="https://ahmedmalaa.github.io/" target="_blank">Ahmed M. &nbsp;Alaa</a>
+  <a href="[https://ahmedmalaa.github.io/](https://scholar.google.com.eg/citations?user=_pv1sEcAAAAJ&hl=en)" target="_blank">Ahmed M. &nbsp;Alaa</a>
   <br> <br>
   <a href="https://arxiv.org/abs/2306.12438" target="_blank">Paper</a> &emsp;
 </div>
 
-<p align="center">
-    <img width="750" alt="picture" src="assets/Workflow.png"/>
-</p>
+https://github.com/AlaaLab/pathologist-in-the-loop/assets/21158134/cce037bf-4dcc-4276-8700-30c8b098ea35
+
 
 ## Introduction
 
@@ -20,6 +19,9 @@ Starting with a diffusion model pretrained using real images, our framework comp
 
 We are still actively developing this repo. 
 
+<p align="center">
+    <img width="750" alt="picture" src="assets/Workflow.png"/>
+</p>
 
 ## Install 
 * Dependencies: 
@@ -39,7 +41,7 @@ We are still actively developing this repo.
 
 ## Preparing Data 
 
-For creating your own dataset, simply dump all of your images into a directory with ".jpg", ".jpeg", or ".png" extensions. If you wish to train a class-conditional model, name the files like "mylabel1_XXX.jpg", "mylabel2_YYY.jpg", etc., so that the data loader knows that "mylabel1" and "mylabel2" are the labels. Subdirectories will automatically be enumerated as well, so the images can be organized into a recursive structure (although the directory names will be ignored, and the underscore prefixes are used as names). 
+To adapt the code for your own dataset, simply place all of your images into a directory with ".jpg", ".jpeg", or ".png" extensions. If you wish to train a class-conditional model, name the files using the following format: "mylabel1_XXX.jpg", "mylabel2_YYY.jpg", etc., and the data loader will recognize "mylabel1" and "mylabel2" as labels. Subdirectories will automatically be enumerated as well, so the images can be organized into a recursive structure (although the directory names will be ignored, and the underscore prefixes are used as names). 
 
 The images will automatically be scaled and center-cropped by the data-loading pipeline. Simply pass --data_dir path/to/images to the training script, and it will take care of the rest.
 
