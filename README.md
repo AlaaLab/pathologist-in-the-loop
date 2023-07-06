@@ -9,7 +9,7 @@
 </div>
 
 <p align="center">
-    <img width="750" alt="video" src="assets/workflow.png"/>
+    <img width="750" alt="image" src="assets/workflow.png"/>
 </p>
 
 ## Introduction
