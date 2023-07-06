@@ -12,6 +12,10 @@
     <img width="750" alt="picture" src="assets/Workflow.png"/>
 </p>
 
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+</video>
+
 ## Introduction
 
 This is the codespace for "Aligning Synthetic Medical Images with Clinical Knowledge using Human Feedback". 
