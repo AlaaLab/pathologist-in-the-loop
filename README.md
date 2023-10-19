@@ -122,7 +122,7 @@ For more details on different parameters for diffusion models, as well as the sa
 @article{sun2023aligning,
   title={Aligning Synthetic Medical Images with Clinical Knowledge using Human Feedback},
   author={Sun, Shenghuan and Goldgof, Gregory M and Butte, Atul and Alaa, Ahmed M},
-  journal={arXiv preprint arXiv:2306.12438},
+  journal={Advances in Neural Information Processing Systems},
   year={2023}
 }
 ```
